@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anoopkshelloworld 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anoopkshelloworld
+  template:
+    metadata:
+      labels:
+        app: anoopkshelloworld 
+    spec:
+      containers:
+        - name: anoopkshelloworld 
+          image: demosamplek8.azurecr.io/anoopkshelloworld
+          ports:
+          - containerPort: 80
